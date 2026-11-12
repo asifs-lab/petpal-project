@@ -1,0 +1,494 @@
+/* google font link start */
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+/* google font link end */
+
+/* All css part start here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffaf5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.container {
+  width: 1260px;
+  margin: 0 auto;
+}
+/* All css part end here */
+
+/* header part start here */
+#navSection {
+  padding-top: 27px;
+  padding-bottom: 28px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContent .logo,
+.navContent .logSignButton {
+  flex: 1;
+}
+
+.navContent .menuButton {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navContent .menuButton a {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  padding: 14px 20px;
+  white-space: nowrap;
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3d394e;
+  transition: color 0.3s ease;
+}
+
+.navContent .menuButton a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/header/nav/Vector (3).svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.navContent .menuButton a:hover,
+.navContent .menuButton a:focus-visible {
+  color: #ff9a4d;
+}
+
+.navContent .menuButton a:hover::before,
+.navContent .menuButton a:focus-visible::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.navContent .menuButton a:focus-visible {
+  outline: none;
+}
+
+.navContent .logSignButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.navContent .logSignButton a {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  white-space: nowrap;
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ff9f56;
+  background-color: transparent;
+  padding: 12px 36px;
+  border-radius: 30px;
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(255, 154, 85, 0);
+  transition:
+    color 0.3s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.navContent .logSignButton a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 154, 85, 1) 0%,
+    rgba(255, 181, 85, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.navContent .logSignButton a:hover,
+.navContent .logSignButton a:focus-visible {
+  color: #fffaf5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 154, 85, 0.4);
+}
+
+.navContent .logSignButton a:hover::before,
+.navContent .logSignButton a:focus-visible::before {
+  opacity: 1;
+}
+
+.navContent .logSignButton a:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(255, 154, 85, 0.3);
+}
+
+.navContent .logSignButton a:focus-visible {
+  outline: 2px solid rgba(255, 154, 85, 0.8);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navContent .menuButton a,
+  .navContent .menuButton a::before,
+  .navContent .logSignButton a,
+  .navContent .logSignButton a::before {
+    transition: none;
+  }
+  .navContent .logSignButton a:hover {
+    transform: none;
+  }
+}
+/* header part end here */
+
+/* hero part start here */
+#hero {
+  padding-top: 29px;
+  padding-bottom: 209px;
+}
+
+.heroContent .left h1 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 0.3%;
+  line-height: 96px;
+  width: 584px;
+  color: #27233a;
+}
+
+.heroContent .left p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.3%;
+  line-height: 40px;
+  width: 509px;
+  margin-top: 36px;
+  margin-bottom: 52px;
+  color: #27233a;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+#hero .heroBtns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 22px 40px;
+  border-radius: 50px;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btnPrimary {
+  background: transparent;
+  color: #ff8a3d;
+  border: 2px solid #ff8a3d;
+  box-shadow: 0 6px 16px rgba(255, 138, 61, 0.2);
+}
+
+/* **************************** */
+.btnSecondary,
+.btnPrimary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateY(0);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.3s ease;
+  will-change: transform;
+}
+
+.btnSecondary::before,
+.btnPrimary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 154, 85, 1) 0%,
+    rgba(255, 181, 85, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btnSecondary:hover,
+.btnPrimary:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(255, 138, 61, 0.45);
+}
+
+.btnSecondary:hover::before,
+.btnPrimary:hover::before {
+  opacity: 1;
+}
+
+.btnSecondary:active,
+.btnPrimary:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(255, 138, 61, 0.35);
+}
+
+/* Keyboard accessibility */
+.btnSecondary:focus-visible,
+.btnPrimary:focus-visible {
+  outline: 2px solid rgba(255, 154, 85, 0.8);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btnSecondary,
+  .btnPrimary,
+  .btnSecondary::before,
+  .btnPrimary::before {
+    transition: none;
+  }
+  .btnSecondary:hover,
+  .btnPrimary:hover {
+    transform: none;
+  }
+}
+/* ************************* */
+
+.btnSecondary {
+  background: transparent;
+  color: #ff8a3d;
+  border: 2px solid #ff8a3d;
+}
+
+.heroVector {
+  display: flex;
+  position: relative;
+}
+
+.heroVector .vectorOne {
+  position: absolute;
+  top: -118px;
+  left: 107px;
+}
+
+.heroVector .vectorTwo {
+  position: absolute;
+  top: -663px;
+  left: -79px;
+  z-index: -1;
+}
+
+/* hero part end here */
+
+/* We do part start here */
+#do {
+  padding-bottom: 124px;
+}
+
+.doContent .text h2 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 7%;
+  line-height: 48px;
+  text-align: center;
+}
+
+.doContent .text p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.3%;
+  line-height: 40px;
+  text-align: center;
+  width: 615px;
+  color: #27233a;
+  margin: 40px auto 68px;
+}
+
+/* ************************* */
+.doContent .cartSection .card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 53px 36px 36px 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 22.5px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  flex: 1;
+  min-width: 0;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s ease;
+  will-change: transform;
+}
+
+.doContent .cartSection .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 127, 36, 1) 5%,
+    rgba(255, 145, 69, 0.87) 38%,
+    rgba(255, 154, 85, 0.8) 55%,
+    rgba(255, 154, 85, 0.4) 87%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.doContent .cartSection .card h4,
+.doContent .cartSection .card p {
+  transition: color 0.3s ease;
+}
+
+.doContent .cartSection .card:hover {
+  background-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(255, 154, 85, 0.35);
+}
+
+.doContent .cartSection .card:hover::before {
+  opacity: 1;
+}
+
+.doContent .cartSection .card:hover h4,
+.doContent .cartSection .card:hover p {
+  color: #ffffff;
+}
+
+/* Keyboard accessibility */
+.doContent .cartSection .card:focus-visible {
+  outline: 2px solid rgba(255, 154, 85, 0.8);
+  outline-offset: 3px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .doContent .cartSection .card,
+  .doContent .cartSection .card::before {
+    transition: none;
+  }
+  .doContent .cartSection .card:hover {
+    transform: none;
+  }
+}
+/* ************************* */
+
+.doContent .cartSection .card h4 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.3%;
+  line-height: 24px;
+  color: #27233a;
+}
+
+.doContent .cartSection .card p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.3%;
+  line-height: 30px;
+  color: #27233a;
+}
+
+.doContent .cartSection .card img {
+  height: 140px;
+  width: 140px;
+  object-fit: contain;
+}
+
+.cartSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.doVector {
+  display: flex;
+  position: relative;
+}
+
+.doVector .vector {
+  position: absolute;
+  top: -710px;
+  left: 583px;
+  z-index: -1;
+}
+
+/* We do part end here */
+
+/* header part start here */
+/* header part end here */
+/* header part start here */
+/* header part end here */
+/* header part start here */
+/* header part end here */
