@@ -331,12 +331,11 @@ ol {
   left: -79px;
   z-index: -1;
 }
-
 /* hero part end here */
 
 /* We do part start here */
 #do {
-  padding-bottom: 124px;
+  padding-bottom: 238px;
 }
 
 .doContent .text h2 {
@@ -483,12 +482,336 @@ ol {
   left: 583px;
   z-index: -1;
 }
-
 /* We do part end here */
 
-/* header part start here */
-/* header part end here */
-/* header part start here */
-/* header part end here */
-/* header part start here */
-/* header part end here */
+/* Special part start here */
+#Special {
+  padding-bottom: 324px;
+}
+
+.specialContent .text h2 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 7%;
+  line-height: 48px;
+  text-align: center;
+}
+
+.specialContent .text p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.3%;
+  line-height: 40px;
+  text-align: center;
+  width: 615px;
+  color: #27233a;
+  margin: 40px auto 100px;
+}
+
+/* ===== layout ===== */
+.specialContent .cardSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* ===== base card (all three same width: 316px) ===== */
+.specialContent .card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 316px;
+  flex-shrink: 0;
+  padding: 50px 20px 54px;
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* hover: only LEFT + RIGHT cards float above everything */
+.specialContent .card.side:hover {
+  z-index: 3;
+  transform: translateY(-14px) scale(1.03);
+  box-shadow: 0 30px 50px rgba(255, 154, 85, 0.35);
+}
+
+/* featured (middle) card: no hover effect */
+.specialContent .card.featured {
+  padding: 48px 20px 40px;
+  border-radius: 44px;
+  z-index: 2;
+  background: linear-gradient(180deg, #ffb482 0%, #ff9a55 45%, #ff7f24 100%);
+  box-shadow: 0 30px 60px -15px rgba(253, 134, 49, 0.5);
+}
+
+/* ===== title ===== */
+.specialContent .card h3 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #27233a;
+  margin-bottom: 26px;
+}
+.specialContent .card.featured h3 {
+  font-size: 26px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* ===== price ===== */
+.specialContent .price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.specialContent .price .currency {
+  font-family: "Manjari", sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #ff9a55;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+.specialContent .price .amount {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #ff9a55;
+}
+
+.specialContent .price .per {
+  position: relative;
+  align-self: flex-end;
+  margin-left: 14px;
+  margin-bottom: 6px;
+  font-family: "Manjari", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  color: #ff9a55;
+}
+
+/* diagonal slash line */
+.specialContent .price .per::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 12px;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 0.5px),
+    currentColor,
+    transparent calc(50% + 0.5px)
+  );
+  opacity: 0.45;
+}
+
+/* featured price: bigger + white */
+.specialContent .card.featured .price {
+  margin-bottom: 30px;
+}
+.specialContent .card.featured .price .currency,
+.specialContent .card.featured .price .amount,
+.specialContent .card.featured .price .per {
+  color: #ffffff;
+}
+.specialContent .card.featured .price .currency {
+  font-size: 34px;
+  margin-top: 0;
+}
+.specialContent .card.featured .price .amount {
+  font-size: 80px;
+}
+.specialContent .card.featured .price .per {
+  font-size: 22px;
+}
+.specialContent .card.featured .price .per::before {
+  width: 58px;
+  height: 58px;
+  left: -26px;
+  bottom: 14px;
+}
+
+/* ===== feature list ===== */
+.specialContent .card .para {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 40px;
+}
+
+.specialContent .card .para p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #3d394e;
+  opacity: 0.75;
+}
+.specialContent .card.featured .para p {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* ===== button (base: all cards) ===== */
+.specialContent .card button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 12px 46px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffa15c 0%, #ff8a3d 100%);
+  box-shadow: 0 16px 24px -6px rgba(255, 138, 61, 0.45);
+}
+
+/* ===== side card buttons: hover effect (only left + right cards) ===== */
+.specialContent .card.side button {
+  transform: translateY(0);
+  transition:
+    color 0.35s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* fill layer that fades in on hover */
+.specialContent .card.side button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: #ffffff;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* shine sweep */
+.specialContent .card.side button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+}
+
+.specialContent .card.side button:hover,
+.specialContent .card.side button:focus-visible {
+  color: #ff8a3d;
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 2px #ff8a3d,
+    0 20px 30px -8px rgba(255, 138, 61, 0.55);
+}
+
+.specialContent .card.side button:hover::before,
+.specialContent .card.side button:focus-visible::before {
+  opacity: 1;
+}
+
+.specialContent .card.side button:hover::after,
+.specialContent .card.side button:focus-visible::after {
+  left: 130%;
+}
+
+.specialContent .card.side button:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow:
+    inset 0 0 0 2px #ff8a3d,
+    0 8px 14px -6px rgba(255, 138, 61, 0.5);
+}
+
+.specialContent .card.side button:focus-visible {
+  outline: 2px solid rgba(255, 154, 85, 0.8);
+  outline-offset: 3px;
+}
+
+/* ===== featured (middle) card button: no hover, simple click animation ===== */
+.specialContent .card.featured button {
+  font-size: 22px;
+  padding: 16px 68px;
+  background: #ffffff;
+  color: #ff8a3d;
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.12),
+    0 0 0 0 rgba(255, 255, 255, 0);
+  transform: scale(1);
+  /* spring-back on release */
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s ease;
+  will-change: transform;
+}
+
+/* click: press down + soft white ring */
+.specialContent .card.featured button:active {
+  transform: scale(0.94);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    0 0 0 7px rgba(255, 255, 255, 0.35);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+/* ===== responsive ===== */
+@media (max-width: 991px) {
+  .specialContent .cardSection {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .specialContent .card {
+    width: 100%;
+    max-width: 316px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .specialContent .card,
+  .specialContent .card.side button,
+  .specialContent .card.side button::before,
+  .specialContent .card.side button::after,
+  .specialContent .card.featured button {
+    transition: none;
+  }
+  .specialContent .card.side:hover,
+  .specialContent .card.side button:hover {
+    transform: none;
+  }
+}
+/* Special part end here */
