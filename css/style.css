@@ -486,7 +486,7 @@ ol {
 
 /* Special part start here */
 #Special {
-  padding-bottom: 324px;
+  padding-bottom: 300px;
 }
 
 .specialContent .text h2 {
@@ -510,7 +510,6 @@ ol {
   margin: 40px auto 100px;
 }
 
-/* ===== layout ===== */
 .specialContent .cardSection {
   display: flex;
   align-items: center;
@@ -518,7 +517,6 @@ ol {
   gap: 30px;
 }
 
-/* ===== base card (all three same width: 316px) ===== */
 .specialContent .card {
   position: relative;
   z-index: 1;
@@ -538,14 +536,12 @@ ol {
   will-change: transform;
 }
 
-/* hover: only LEFT + RIGHT cards float above everything */
 .specialContent .card.side:hover {
   z-index: 3;
   transform: translateY(-14px) scale(1.03);
   box-shadow: 0 30px 50px rgba(255, 154, 85, 0.35);
 }
 
-/* featured (middle) card: no hover effect */
 .specialContent .card.featured {
   padding: 48px 20px 40px;
   border-radius: 44px;
@@ -554,7 +550,6 @@ ol {
   box-shadow: 0 30px 60px -15px rgba(253, 134, 49, 0.5);
 }
 
-/* ===== title ===== */
 .specialContent .card h3 {
   font-family: "Manjari", sans-serif;
   font-weight: 400;
@@ -570,7 +565,6 @@ ol {
   margin-bottom: 20px;
 }
 
-/* ===== price ===== */
 .specialContent .price {
   display: flex;
   align-items: flex-start;
@@ -789,7 +783,6 @@ ol {
     box-shadow 0.12s ease;
 }
 
-/* ===== responsive ===== */
 @media (max-width: 991px) {
   .specialContent .cardSection {
     flex-direction: column;
@@ -814,4 +807,369 @@ ol {
     transform: none;
   }
 }
+
+#Special .container .vector {
+  display: flex;
+  position: relative;
+}
+
+#Special .container .vector .vectorOne {
+  position: absolute;
+  top: 92px;
+  left: 777px;
+  z-index: -1;
+}
+
+#Special .container .vector .vectorTwo {
+  position: absolute;
+  top: -85px;
+  left: 752px;
+  z-index: -1;
+}
+
 /* Special part end here */
+
+/* Testimonials part start here */
+#testimonials {
+  margin-bottom: 100px;
+}
+
+.testContent .text h3 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 7%;
+  color: #27233a;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.testContent .text P {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.03%;
+  color: #27233a;
+  text-align: center;
+}
+
+.testContent .content {
+  display: flex;
+}
+
+.testContent .content .right {
+  margin-top: 250px;
+}
+
+.testContent .content .right h3 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 0px;
+  letter-spacing: 0;
+  color: #27233a;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.testContent .content .right h5 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #27233a;
+  margin-left: 100px;
+  margin-bottom: 36px;
+}
+
+.testContent .content .right p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.3%;
+  color: #27233a;
+  width: 538px;
+  margin-bottom: 40px;
+}
+
+.testContent .content .right .arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
+}
+
+.testContent .content .right .arrowButton button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  color: #ff7f24;
+  background: transparent;
+  border: 3px solid #ff7f24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.testContent .content .right .arrowButton button:hover {
+  background: #ff7f24;
+  color: #fff;
+}
+
+#testimonials .container .vector {
+  display: flex;
+  position: relative;
+}
+
+#testimonials .container .vector .vectorOne {
+  position: absolute;
+  top: -83px;
+  left: 404px;
+  z-index: -1;
+}
+#testimonials .container .vector .vectorTwo {
+  position: absolute;
+  top: 311px;
+  left: 1075px;
+}
+#testimonials .container .vector .vectorThree {
+  position: absolute;
+  top: 321px;
+  left: 746px;
+}
+
+#testimonials .container .vector .vectorFour {
+  position: absolute;
+  top: 1113px;
+  left: 657px;
+  z-index: 1;
+}
+
+#testimonials .container .vector .vectorFive {
+  position: absolute;
+  top: 873px;
+  left: 1147px;
+  z-index: 1;
+}
+
+.testContent .card {
+  padding: 80px 0;
+  border-radius: 32px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.testContent .card .left {
+  margin-left: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.testContent .card .left h3 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 54px;
+  letter-spacing: 7%;
+  color: #ff7f24;
+  margin-bottom: 32px;
+}
+
+.testContent .card .left p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.03%;
+  color: #27233a;
+  margin-bottom: 48px;
+  width: 673px;
+  max-width: 100%;
+}
+
+.testContent .card .left button {
+  padding: 20px 50px 20px 50px;
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1%;
+  background-color: #ff9a55;
+  border: none;
+  color: #ffffff;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #ff9a55;
+}
+
+.testContent .card .left button:hover {
+  border: 2px solid #ff9a55;
+  color: #ff7f24;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.testContent .card .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.testContent .card .right img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+  z-index: 2;
+}
+/* Testimonials part end here */
+
+/* footer part start here */
+#footer {
+  background-color: #ffffff;
+  background-image: url("../images/footer/paw-bg.svg");
+  background-repeat: no-repeat;
+  background-position: left -108px bottom -80px;
+  background-size: 340px auto;
+  overflow: hidden;
+  padding: 50px 0 80px;
+}
+
+.footerContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+/* ===== left ===== */
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  flex-shrink: 0;
+  margin-right:;
+}
+
+.footerLeft .footerLogo {
+  display: block;
+  padding-bottom: 121px; /* logo ar copyright-er majher gap */
+}
+
+.footerLeft .footerLogo img {
+  display: block;
+  width: auto;
+}
+
+.footerLeft .copyright {
+  padding-left: 3px;
+  padding-bottom: 40px; /* niche theke gap */
+}
+
+.footerLeft .copyright p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  color: #8b8794;
+}
+
+.footerLeft .copyright a {
+  transition: color 0.3s ease;
+}
+
+.footerLeft .copyright a:hover,
+.footerLeft .copyright a:focus-visible {
+  color: #ff9a55;
+}
+
+/* ===== columns ===== */
+.footerCol h4 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #27233a;
+  margin-bottom: 26px;
+}
+
+.footerCol ul {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.footerCol ul a {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #9a9ea6;
+  transition: color 0.3s ease;
+}
+
+.footerCol ul a:hover,
+.footerCol ul a:focus-visible {
+  color: #ff9a55;
+}
+
+/* ===== get in touch ===== */
+.footerCol.touch h4 {
+  margin-bottom: 20px;
+}
+
+.footerCol.touch p {
+  font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #8b8794;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  margin-top: 62px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.social a i {
+  font-size: 30px;
+}
+
+.social a:hover {
+  background-color: #ff7f24;
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+/* footer part end here */
